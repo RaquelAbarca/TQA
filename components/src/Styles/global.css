@@ -1,5 +1,5 @@
 header{
-  color: #02416d;
+  color: #000000;
   
 }
 
@@ -22,7 +22,7 @@ h3 {
 }
   
 p {
-    font-family: "Playfair Display";
+    font-family: "inter";
     font-size: 0.875rem;
     font-style: normal;
     font-variant: normal;
@@ -94,7 +94,6 @@ p {
   .nav-links{
     display: flex;
     justify-content: space-between;
-    min-width: 1em;
     align-items: center;
   }
 
@@ -371,9 +370,21 @@ p {
   
       padding: 0 0 0 20px;
       font-size: 1.5em;
-      margin-left: 5px;
-  
-      
+      margin-left: 5px;   
+  }
+
+  .filter{
+    width: 20rem;
+    height: 50rem;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-right:solid #a5a5a5 ;
+  }
+
+  .pgServicios{
+    display: flex;
   }
   
   

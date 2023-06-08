@@ -1,8 +1,22 @@
 ---
 import BarraNavegacion from '../components/BarraNavegacion.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TodosLosServicios from '../components/Servicios/TodosLosServicios.astro';
 const pageTitle = "Trabajos Que Ayudan";
 ---
 <BaseLayout pageTitle={pageTitle}>
     <BarraNavegacion />
+    <div class="pgServicios">
+        <div class="filter">
+            Filtros
+            Ubicacion
+            Servicios:
+            Todos
+            Jardineria
+            etc
+            etc
+            etc
+        </div>
+        <TodosLosServicios />
+    </div>
 </BaseLayout>
