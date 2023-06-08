@@ -2,21 +2,109 @@
 ---
 
 <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/products">Servicios y Productos</a>
-    <a href="#">Ser proveedor</a>
-    <a href="#">Sobre TQA</a> <!--poner dentro de esta los testimonios -->
-    <a href="/login" class="login-cart">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 55" width="25" height="25" fill="#000000">
-            <path stroke="#d1b389" stroke-width="2" d="M18.43,19.27a9.64,9.64,0,1,1,9.64-9.64A9.65,9.65,0,0,1,18.43,19.27ZM18.43,2a7.64,7.64,0,1,0,7.64,7.64A7.65,7.65,0,0,0,18.43,2ZM35.85,46.56a1,1,0,0,1-1-1A16.43,16.43,0,1,0,2,45.56a1,1,0,0,1-2,0,18.43,18.43,0,1,1,36.85,0A1,1,0,0,1,35.85,46.56Z"/>
-            <path stroke="#d1b389" stroke-width="2" d="M35.85,46.56a1,1,0,0,1-1-1A16.43,16.43,0,1,0,2,45.56a1,1,0,0,1-2,0,18.43,18.43,0,1,1,36.85,0A1,1,0,0,1,35.85,46.56Z"></path>
-        </svg>
-        Iniciar Sesion
-    </a>
-    <a href="#" class="login-cart">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21" fill="#000000">
-            <path d="M10.7841765,16.4282353 C11.7276176,16.4282353 12.4602059,17.2282353 12.4602059,18.2197058 C12.4602059,19.215 11.7276176,20.015 10.7841765,20.015 C9.84073529,20.015 9.10814706,19.215 9.10814706,18.2197058 C9.10814706,17.2282353 9.84073529,16.4282353 10.7841765,16.4282353 Z M22.0377941,16.4282353 C22.9812353,16.4282353 23.7138235,17.2282353 23.7138235,18.2197058 C23.7138235,19.215 22.9812353,20.015 22.0377941,20.015 C20.9943529,20.015 20.2617647,19.215 20.2617647,18.2197058 C20.2617647,17.2282353 20.9943529,16.4282353 22.0377941,16.4282353 Z M23.2464118,12.5741176 L9.29708824,12.5741176 L7.22155883,4.72764706 L25.0417941,4.74617647 L23.2464118,12.5741176 Z M26.9005588,3.23529412 C26.7351471,3.04294118 26.4889412,2.92941176 26.2266765,2.92323529 L6.80608824,2.90470588 L6.19252942,0.611764706 C6.08567647,0.224117647 5.73955883,0 5.37632353,0 L0.876470588,0 C0.394441177,0 0,0.394117647 0,0.876470591 C0,1.35882353 0.394441177,1.75294118 0.876470588,1.75294118 L4.48108824,1.75294118 L5.05870589,3.97117647 C5.06179412,3.98970588 5.0645,4.00205882 5.06820589,4.01441176 L7.56302942,13.7252941 C7.66988236,14.1329411 8.028,14.4170588 8.44985295,14.4170588 L24.0032647,14.4170588 C24.4244118,14.4170588 24.7825294,14.1205882 24.8795,13.7005882 L27.1104412,4.00970588 C27.1739706,3.73794118 27.1085,3.44764706 26.9005588,3.23529412 Z" id="6G">
-            </path>
-        </svg>              
-        </a>
+    <div class="nav-icon" id="toggle">
+        <a href="#" id="navIcon" class="nav-icon">&#9776;</a>
+
+        <a href="#" id="navIcon" class="nav-icon hidden">&#9932;</a>
+    </div>
+
+    <nav>
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </div>
+
+<style>
+    nav {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 5em;
+        padding: 0 1em;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+        display: inline-block;
+    }
+
+    nav ul li a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .menu-icon {
+        display: none;
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+    }
+    .open {
+        height: 100vh;
+    }
+    .hidden {
+        display: none;
+    }
+
+    @media all and (max-width: 720px) {
+        #container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        nav {
+            height: 0;
+            width: 100%;
+            overflow: hidden;
+            transition: 250ms height ease-in-out;
+            margin-left: 1rem;
+            display: block;
+        }
+        nav ul li {
+            margin-left: 1rem;
+            display: block;
+            align-items: center;
+            padding: 1em;
+            align-items: center;
+        }
+        li {
+            display: block;
+            text-align: center;
+        }
+        .menu-icon {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+   
+    const navToggle = document.querySelector("#menu-toggle");
+    const navigation = document.querySelector("#menu");
+    const navIcon = [...document.querySelectorAll("#navIcon")];
+    console.log(navIcon)
+    const hamburger = document.querySelector("#menu-toggle");
+
+    navToggle?.addEventListener("click", () => {
+        navigation?.classList.toggle("open");
+        navIcon.forEach((icon) => {
+            icon.classList.toggle("hidden");
+            console.log("for each prueba");
+        });
+    });
+    window.addEventListener("resize", () => {
+        if (document.body.clientWidth > 720) {
+            navigation?.classList.remove("open");
+            navIcon.forEach((icon, i) => {
+                icon.classList.add("hidden");
+               
+            });
+            hamburger?.classList.remove("hidden");
+        }
+    });
+</script>
