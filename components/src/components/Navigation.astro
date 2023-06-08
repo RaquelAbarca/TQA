@@ -1,13 +1,9 @@
 ---
+import NavLines from "./NavLines.astro";
 ---
 
-<div class="nav-links">
-    <div class="nav-icon" id="toggle">
-        <a href="#" id="navIcon" class="nav-icon">&#9776;</a>
-
-        <a href="#" id="navIcon" class="nav-icon hidden">&#9932;</a>
-    </div>
-
+<div class="container">
+    <NavLines />    
     <nav>
         <ul id="menu">
             <li><a href="#">Home</a></li>
@@ -85,8 +81,8 @@
 <script>
    
     const navToggle = document.querySelector("#menu-toggle");
-    const navigation = document.querySelector("#menu");
-    const navIcon = [...document.querySelectorAll("#navIcon")];
+    const navigation = document.querySelector("nav");
+    const navIcon = [...document.querySelectorAll(".nav-icon-000")];
     console.log(navIcon)
     const hamburger = document.querySelector("#menu-toggle");
 

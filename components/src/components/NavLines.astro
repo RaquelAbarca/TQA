@@ -1,11 +1,14 @@
 ---
 import MobileNav from "./MobileNav.astro";
 ---
-<div class="containerLogoLines">
+<div id="container">
     <div class="navLines" id="navLines">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+        <div class="nav-icon" id="menu-toggle">
+            <a href="#" id="navIcon" class="nav-icon-000">&#9776;</a>
+    
+            <a href="#" id="navIcon" class="nav-icon-000 hidden">&#9932;</a>
+        </div>
+
         <MobileNav />
     </div>
 </div>
