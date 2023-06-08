@@ -3,24 +3,24 @@ header{
 }
 
 h1 {
-    font-family: "Playfair Display";
-    font-size: 1.5rem;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    line-height: 1.1;
-  }
+  font-family: "Playfair Display";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 1.1;
+}
   
-  h3 {
-    font-family: "Playfair Display";
+h3 {
+  font-family: "Playfair Display";
     font-size: 0.875rem;
     font-style: normal;
     font-variant: normal;
     font-weight: 700;
     line-height: 1.1;
-  }
+}
   
-  p {
+p {
     font-family: "Playfair Display";
     font-size: 0.875rem;
     font-style: normal;
@@ -29,7 +29,7 @@ h1 {
     line-height: 1.4286;
     margin: 0;
     padding: 0;
-  }
+}
   
   
   
@@ -88,6 +88,19 @@ h1 {
     justify-content: space-between;
     margin: 0 auto;
   }
+
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    min-width: 1em;
+    align-items: center;
+  }
+
+  .login-cart{
+    display: flex;
+    justify-content: space-between;
+  }
+
   header div a{
     text-decoration: none;
   }
@@ -144,6 +157,7 @@ h1 {
       padding: 1em;
       align-items: center;
     }
+
      li  {
       display: block;
       text-align: center;
@@ -202,10 +216,11 @@ h1 {
     font-family: "Playfair Display";
     font-style: normal;
     font-variant: normal;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
   .hero  .text p{
     font-family: 'inter';
+    margin-bottom: 3rem;
   }
   
   .hero img{
