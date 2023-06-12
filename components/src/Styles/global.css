@@ -45,7 +45,7 @@ p {
   
   body {
     margin: 0;
-    background: #f8f8ec;
+    background: #ffffff;
     font-family: 'Playfair Display';
     padding: 20px;
   }
@@ -89,6 +89,7 @@ p {
     display: flex;
     justify-content: flex-end;
     margin: 0 auto;
+    align-items: center;
   }
 
   .nav-links{
@@ -117,7 +118,7 @@ p {
   }
 
   .nav-links a{
-    padding-left: 25px;
+    padding-left: 15px;
   }
   
   nav ul li {
@@ -170,6 +171,12 @@ p {
     }
     .menu-icon{
       display: block;
+    }
+
+    .flex-container-servicio{
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
     }
   }
   .product img {
