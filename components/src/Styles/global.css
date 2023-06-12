@@ -391,9 +391,8 @@ p {
   .filter{
     width: 20rem;
     height: 50rem;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
+    padding-right: 0.6em;
+    
     font-size: 30px;
     border-right:solid #a5a5a5 ;
   }
@@ -402,4 +401,7 @@ p {
     display: flex;
   }
   
+  .cuadro-servicio{
+    padding-left: 1em;
+  }
   

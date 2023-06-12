@@ -2,33 +2,32 @@
 import BarraNavegacion from '../components/BarraNavegacion.astro';
 import ServicioLayout from '../layouts/ServicioLayout.astro';
 import TodosLosServicios from '../components/Servicios/TodosLosServicios.astro';
+import EstrellasCalificacion from '../components/Servicios/EstrellasCalificacion.astro';
+import CalendarioAgenda from '../components/Servicios/CalendarioAgenda.astro';
+import Comentarios from '../components/Servicios/Comentarios.astro';
 const pageTitle = "Trabajos Que Ayudan";
 ---
 <ServicioLayout pageTitle={pageTitle}>
-  <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Perfil del Proveedor</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-
 <body>
     <div class="container">
         <div class="profile">
-          <img src="https://st4.depositphotos.com/1017986/39200/i/450/depositphotos_392006782-stock-photo-happy-man-in-apron-at.jpg" alt="Benefit 2" class="imagen-cuadro-servicio">
-            <h1>Nombre del Proveedor</h1>
-            <p>Descripción breve del proveedor.</p>
+            <img src="https://st4.depositphotos.com/1017986/39200/i/450/depositphotos_392006782-stock-photo-happy-man-in-apron-at.jpg" alt="Benefit 2" class="imagen-cuadro-servicio">
+            <EstrellasCalificacion />
+            <button class="hire-button">Contratar</button>
         </div>
         <div class="info">
+            <h1>Nombre del Proveedor</h1>
+            <p>Descripción breve del proveedor.</p>
             <h2>Información de Contacto</h2>
             <ul>
                 <li><strong>Correo electrónico:</strong> proveedor@example.com</li>
                 <li><strong>Teléfono:</strong> 1234567890</li>
                 <li><strong>Dirección:</strong> Calle 123, Ciudad, País</li>
             </ul>
+            <CalendarioAgenda />
         </div>
     </div>
+    <Comentarios />
 </body>
 
 <style>
@@ -39,22 +38,26 @@ const pageTitle = "Trabajos Que Ayudan";
 }
 
 .container {
-    max-width: 600px;
+    max-width: 90%;
     margin: 50px auto;
     padding: 20px;
     background-color: #f1f1f1;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
 
 .profile {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
@@ -68,6 +71,10 @@ const pageTitle = "Trabajos Que Ayudan";
 .profile p {
     font-size: 16px;
     color: #666;
+}
+
+.info{
+    padding: 1em;
 }
 
 .info h2 {
@@ -90,6 +97,20 @@ strong {
     font-weight: bold;
 }
 
+.hire-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.hire-button:hover {
+  background-color: #45a049;
+}
+
 </style>
-</html>
 </ServicioLayout>
