@@ -11,7 +11,6 @@
             <li><a href="#">Home</a></li>
             <li><a href="servicios">Servicios</a></li>
             <li><a href="#">Ser Proveedor</a></li>
-            <!-- <li><a href="#">Sobre Nosotros</a></li> -->
             <li><a href="#">Iniciar Sesion</a></li>
             <li><a href="#">Carrito</a></li>
         </ul>
@@ -82,18 +81,17 @@
 </style>
 
 <script>
-   
     const navToggle = document.querySelector("#menu-toggle");
     const navigation = document.querySelector("nav");
     const navIcon = [...document.querySelectorAll(".nav-icon-000")];
-    console.log(navIcon)
+    //console.log(navIcon)
     const hamburger = document.querySelector("#menu-toggle");
 
     navToggle?.addEventListener("click", () => {
         navigation?.classList.toggle("open");
         navIcon.forEach((icon) => {
             icon.classList.toggle("hidden");
-            console.log("for each prueba");
+            //console.log("for each prueba");
         });
     });
     window.addEventListener("resize", () => {
@@ -106,4 +104,5 @@
             hamburger?.classList.remove("hidden");
         }
     });
+    
 </script>
