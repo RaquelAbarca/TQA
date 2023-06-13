@@ -81,28 +81,28 @@
 </style>
 
 <script>
-    const navToggle = document.querySelector("#menu-toggle");
-    const navigation = document.querySelector("nav");
-    const navIcon = [...document.querySelectorAll(".nav-icon-000")];
-    //console.log(navIcon)
-    const hamburger = document.querySelector("#menu-toggle");
+    // const navToggle = document.querySelector("#menu-toggle");
+    // const navigation = document.querySelector("nav");
+    // const navIcon = [...document.querySelectorAll(".nav-icon-000")];
+    // //console.log(navIcon)
+    // const hamburger = document.querySelector("#menu-toggle");
 
-    navToggle?.addEventListener("click", () => {
-        navigation?.classList.toggle("open");
-        navIcon.forEach((icon) => {
-            icon.classList.toggle("hidden");
-            //console.log("for each prueba");
-        });
-    });
-    window.addEventListener("resize", () => {
-        if (document.body.clientWidth > 720) {
-            navigation?.classList.remove("open");
-            navIcon.forEach((icon, i) => {
-                icon.classList.add("hidden");
+    // navToggle?.addEventListener("click", () => {
+    //     navigation?.classList.toggle("open");
+    //     navIcon.forEach((icon) => {
+    //         icon.classList.toggle("hidden");
+    //         //console.log("for each prueba");
+    //     });
+    // });
+    // window.addEventListener("resize", () => {
+    //     if (document.body.clientWidth > 720) {
+    //         navigation?.classList.remove("open");
+    //         navIcon.forEach((icon, i) => {
+    //             icon.classList.add("hidden");
                
-            });
-            hamburger?.classList.remove("hidden");
-        }
-    });
+    //         });
+    //         hamburger?.classList.remove("hidden");
+    //     }
+    // });
     
 </script>

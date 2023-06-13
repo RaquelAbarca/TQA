@@ -9,26 +9,25 @@
     
 
     <div id="id01" class="modal">
-        <!-- <button id="btn-login">Sign In</button> -->
+        
         <form
             class="modal-content animate"
-            action="/action_page.php"
+            
             method="post"
         >
-            <div class="imgcontainer">
+            <div class="Navcontainer">
                 <nav>
 
-                    <ul id="menu">
+                    <ul id="mobileMenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="servicios">Servicios</a></li>
                         <li><a href="#">Ser Proveedor</a></li>
-                        <!-- <li><a href="#">Iniciar Sesion</a></li> -->
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
  
             </div>
-            <button id="btn-login">Sign In</button>
+            <a id="btn-login">Sign In</a>
             <div class="containerLogin">
 
                 <label for="uname"><b>Username</b></label>
@@ -36,7 +35,7 @@
                     type="text"
                     placeholder="Enter Username"
                     name="uname"
-                    required
+                    
                 />
 
                 <label for="psw"><b>Password</b></label>
@@ -44,7 +43,7 @@
                     type="password"
                     placeholder="Enter Password"
                     name="psw"
-                    required
+                    
                 />
 
                 <button type="submit">Login</button>
@@ -57,8 +56,8 @@
             <div class="container" style="background-color:#f1f1f1">
                 <button
                     type="button"
-                    onclick="document.getElementById('id01').style.display = 'none'"
-                    class="cancelbtn">Cancel</button
+                    onclick="document.getElementById('id01').style.display = 'none';"
+                    class="cancelbtn">Close</button
                 >
                 <span class="psw">Forgot <a href="#">password?</a></span>
             </div>
@@ -66,9 +65,22 @@
     </div>
 </div>
 <style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
+     nav{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+     nav ul li{
+        margin-left: 1rem;
+        display: block;
+        padding-top: 2.5em;
+    }
+   nav ul li a{
+        color: #000000;
+        text-decoration: none;
+    }
+ 
 
     /* Full-width input fields */
     input[type="text"],
@@ -104,16 +116,19 @@
     }
 
     /* Center the image and position the close button */
-    .imgcontainer {
+    .Navcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
-        position: relative;
+        display: block;
+        max-height: fit-content;
+        
+        
     }
 
-    img.avatar {
+    /* img.avatar {
         width: 40%;
         border-radius: 50%;
-    }
+    } */
 
     .containerLogin {
         top: 50%;
@@ -162,8 +177,7 @@
         font-weight: bold;
     }
 
-    .close:hover,
-    .close:focus {
+    .close:hover,.close:focus {
         color: red;
         cursor: pointer;
     }
@@ -195,7 +209,7 @@
     }
 
     /* Change styles for span and cancel button on extra small screens */
-    @media screen and (max-width: 300px) {
+    /* @media screen and (max-width: 300px) {
         span.psw {
             display: block;
             float: none;
@@ -203,7 +217,20 @@
         .cancelbtn {
             width: 100%;
         }
-    }
+        nav{
+            display: block;
+            height: 0;
+            width: 100%;
+        }
+        nav ul li{
+            display: block;
+            align-items: center;
+        }
+        nav ul li a {
+        color: #000000;
+        text-decoration: none;
+    } 
+    }*/
 </style>
 
 <script>
