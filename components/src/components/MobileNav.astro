@@ -6,18 +6,11 @@
         onclick="document.getElementById('id01').style.display = 'block'"
         style="width:auto;">&#9776;</button
     >
-    
 
     <div id="id01" class="modal">
-        
-        <form
-            class="modal-content animate"
-            
-            method="post"
-        >
+        <form class="modal-content animate" method="post">
             <div class="Navcontainer">
                 <nav>
-
                     <ul id="mobileMenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="servicios">Servicios</a></li>
@@ -25,25 +18,18 @@
                         <li><a href="#">Carrito</a></li>
                     </ul>
                 </nav>
- 
             </div>
+
             <a id="btn-login">Sign In</a>
             <div class="containerLogin">
-
                 <label for="uname"><b>Username</b></label>
-                <input
-                    type="text"
-                    placeholder="Enter Username"
-                    name="uname"
-                    
-                />
+                <input type="text" placeholder="Enter Username" name="uname" />
 
                 <label for="psw"><b>Password</b></label>
                 <input
                     type="password"
                     placeholder="Enter Password"
                     name="psw"
-                    
                 />
 
                 <button type="submit">Login</button>
@@ -53,35 +39,20 @@
                 </label>
             </div>
 
-            <div class="container" style="background-color:#f1f1f1">
+            <div class="container" id="closeContainer">
                 <button
                     type="button"
-                    onclick="document.getElementById('id01').style.display = 'none';"
+                    onclick="document.getElementById('id01').style.display = 'none'"
                     class="cancelbtn">Close</button
                 >
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <span class="psw" id="pswForget"
+                    >Forgot <a href="#">Password?</a></span
+                >
             </div>
         </form>
     </div>
 </div>
 <style>
-     nav{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-     nav ul li{
-        margin-left: 1rem;
-        display: block;
-        padding-top: 2.5em;
-    }
-   nav ul li a{
-        color: #000000;
-        text-decoration: none;
-    }
- 
-
     /* Full-width input fields */
     input[type="text"],
     input[type="password"] {
@@ -115,38 +86,80 @@
         background-color: #f44336;
     }
 
-    /* Center the image and position the close button */
+    /* Styles for the navigation inside the modal */
     .Navcontainer {
         text-align: center;
         margin: 24px 0 12px 0;
         display: block;
         max-height: fit-content;
-        
-        
     }
-
-    /* img.avatar {
-        width: 40%;
-        border-radius: 50%;
-    } */
-
+    nav {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 3em;
+        font-size: 1.5em;
+        height: 10em;
+    }
+    nav ul li {
+        margin-left: 1rem;
+        display: block;
+        padding-top: 2em;
+    }
+    nav ul li a {
+        color: #000000;
+        text-decoration: none;
+    }
+    #btn-login {
+        font-size: 1.5em;
+        padding: 0.3em;
+        margin-left: 1em;
+        background-color: aquamarine;
+        border-radius: 10%;
+        width: 50%;
+    }
+    /* TODO:need to change color of BG */
+    #btn-login:hover {
+        background-color: rgb(77, 196, 157);
+    }
     .containerLogin {
         top: 50%;
         height: 0;
         overflow: hidden;
     }
-    .containerLogin.active{
+    .containerLogin.active {
         height: auto;
     }
 
     span.psw {
         float: right;
         padding-top: 16px;
+        font-size: 1.25em;
+    }
+    /* close btn & forget password*/
+    #closeContainer {
+        background-color: #f1f1f1;        
+    }
+    #closeContainer, button {
+        margin: 1em;
+    }
+    /* .close {
+        position: relative; 
+         right: 25px;
+        height: 0;
+        color: #000;
+        font-weight: bold;
+        font-size: 2em;
+    } */
+
+    .cancelbtn:hover {
+        cursor: pointer;
     }
 
     /* The Modal (background) */
     .modal {
-        display: none; /* Hidden by default */
+        /* Hidden by default */
         position: fixed; /* Stay in place */
         z-index: 1; /* Sit on top */
         left: 0;
@@ -163,23 +176,9 @@
     .modal-content {
         background-color: #fefefe;
         margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button (x) */
-    .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-    }
-
-    .close:hover,.close:focus {
-        color: red;
-        cursor: pointer;
+        border: 2px solid #888;
+        width: 95%; /* Could be more or less, depending on screen size */
+        height: 85%;
     }
 
     /* Add Zoom Animation */
@@ -187,8 +186,6 @@
         -webkit-animation: animatezoom 0.6s;
         animation: animatezoom 0.6s;
     }
-
-
 
     @-webkit-keyframes animatezoom {
         from {
@@ -209,7 +206,7 @@
     }
 
     /* Change styles for span and cancel button on extra small screens */
-    /* @media screen and (max-width: 300px) {
+    @media screen and (max-width: 300px) {
         span.psw {
             display: block;
             float: none;
@@ -217,20 +214,7 @@
         .cancelbtn {
             width: 100%;
         }
-        nav{
-            display: block;
-            height: 0;
-            width: 100%;
-        }
-        nav ul li{
-            display: block;
-            align-items: center;
-        }
-        nav ul li a {
-        color: #000000;
-        text-decoration: none;
-    } 
-    }*/
+    }
 </style>
 
 <script>
@@ -244,10 +228,10 @@
         }
     };
 
-    const btnLogin = document.getElementById('btn-login');
-    const containerLogin = document.getElementsByClassName('containerLogin');
+    const btnLogin = document.getElementById("btn-login");
+    const containerLogin = document.getElementsByClassName("containerLogin");
 
-    btnLogin?.addEventListener('click', function(){
-        containerLogin[0].classList.toggle('active')
-    })
+    btnLogin?.addEventListener("click", function () {
+        containerLogin[0].classList.toggle("active");
+    });
 </script>
