@@ -1,55 +1,99 @@
 ---
 const products = [
-    { name: 'jardineria fernando' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10,direccion:"asbdaskdjasndkasssd",  currency:"$", forward:"jardineriaFernando" ,id:"1" },
-    { name: 'Product 1' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"jardineriaFernando" ,id:"1" },
-    { name: 'Product 1' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"jardineriaFernando" ,id:"1" },
-    { name: 'Product 1' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"jardineriaFernando" ,id:"1" },
+  {
+    name: "jardineria fernando",
+    description: "Enjoy free shipping on all orders.",
+    src: "https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg",
+    price: 10,
+    direccion: "asbdaskdjasndkasssd",
+    currency: "$",
+    forward: "jardineriaFernando",
+    id: "1",
+  },
+  {
+    name: "Product 1",
+    description: "Enjoy free shipping on all orders.",
+    src: "https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg",
+    price: 10,
+    currency: "$",
+    forward: "jardineriaFernando",
+    id: "1",
+  },
+  {
+    name: "Product 1",
+    description: "Enjoy free shipping on all orders.",
+    src: "https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg",
+    price: 10,
+    currency: "$",
+    forward: "jardineriaFernando",
+    id: "1",
+  },
+  {
+    name: "Product 1",
+    description: "Enjoy free shipping on all orders.",
+    src: "https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg",
+    price: 10,
+    currency: "$",
+    forward: "jardineriaFernando",
+    id: "1",
+  },
 
-
-    // Add more products as needed
-  ];
+  // Add more products as needed
+];
 ---
+
 <div class="flex-container-servicio">
-      
   {
     products.map((item) => (
-    <div>
+      <div class="servicio-elemento">
         <a href={item.forward} class="links4servicios">
-        <img src="https://st4.depositphotos.com/1017986/39200/i/450/depositphotos_392006782-stock-photo-happy-man-in-apron-at.jpg" alt="Benefit 2" class="imagen-cuadro-servicio">
-        <div>
+          <img
+            src="https://st4.depositphotos.com/1017986/39200/i/450/depositphotos_392006782-stock-photo-happy-man-in-apron-at.jpg"
+            alt="Benefit 2"
+            class="imagen-cuadro-servicio"
+          />
+          <div>
             <p>{item.name}</p>
-            <p>{item.currency}{item.price}</p>
-        </div>
+            <p>
+              {item.currency}
+              {item.price}
+            </p>
+          </div>
         </a>
       </div>
-
-      
-
     ))
-  }  
+  }
 </div>
 
-
 <style>
-    .links4servicios{
-        text-decoration: none;
-    }
-    .flex-container-servicio {
-      display: flex;
-      justify-content: space-evenly;
-    }
-    
-    .flex-container-servicio > div {
-      width: 200px;
-      margin: 10px;
-      text-align: center;
-      line-height: 30px;
-      font-size: 30px;
-      border-radius: 12px;
-    }
+  .links4servicios {
+    text-decoration: none;
+  }
+  .flex-container-servicio {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-    .imagen-cuadro-servicio{
-        max-width: 100%;
-        border-radius: 12px;
+  .flex-container-servicio > div {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    border-radius: 12px;
+  }
+
+  .imagen-cuadro-servicio {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  @media all and (max-width: 720px) {
+    
+
+    .flex-container-servicio > div {
+     width:unset;
+   
     }
+  }
 </style>
