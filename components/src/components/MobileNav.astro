@@ -7,7 +7,7 @@
         id="btn-icon">&#9776;
     </button>
 
-    <div id="id01" class="modal">
+    <div id="id01" style="display: none;" class="modal">
         <form class="modal-content animate" method="post">
             <div class="Navcontainer">
                 <nav>
@@ -20,7 +20,7 @@
                 </nav>
             </div>
 
-            <a id="btn-login">Sign In</a>
+            <a id="btn-login">  <p>Sign In</p> </a>
             <div class="containerLogin">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" />
@@ -87,6 +87,7 @@
     }
     nav {
         font-family: "inter";
+        font-weight: 700;
         list-style: none;
         display: flex;
         justify-content: center;
@@ -105,23 +106,30 @@
         text-decoration: none;
     }
     #btn-login {
+
+        display: block;
+        text-align: center;
         color: #f1f1f1;
-        font-size: 1.5em;
+        font-weight: 700;
         padding: 0.3em;
-        margin-left: 1em;
-        background-color: #082e52;
-        border-radius: 10%;
-        width: 50%;
+        background-color: #000000;
+        width: auto;
     }
-    
+    #btn-login p{
+        
+        font-size: 1.5em;
+        font-family: "inter";
+        font-weight: 700;
+    }
     #btn-login:hover {
-        background-color: #061e35;
+        background-color: #000000;
     }
     .containerLogin {
         top: 50%;
         height: 0;
         overflow: hidden;
         margin: 10px;
+        background-color: #ffffff;
     }
     .containerLogin.active {
         height: auto;
@@ -134,7 +142,7 @@
     }
  /* close btn & forget password*/
     #closeContainer {
-        background-color: #f1f1f1; 
+        background-color: #ffffff; 
         border-radius: 5%;       
     }
     #closeContainer, button {
@@ -142,10 +150,10 @@
     }
 
 /* Extra styles for the cancel button */
-        .cancelbtn {
+    .cancelbtn {
         width: auto;
         padding: 10px 18px;
-        background-color: #032545a4;
+        background-color:#000000;
     }
 
     .cancelbtn:hover {
@@ -173,7 +181,7 @@
         margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
         border: 2px solid #888;
         width: 95%; /* Could be more or less, depending on screen size */
-        height: 85%;
+        height: auto;
     }
 
 /* Add Zoom Animation */
