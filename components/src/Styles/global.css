@@ -108,10 +108,10 @@ p {
     text-decoration: none;
   }
   
-  nav #menu{
+  nav{
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+     display: flex; 
+    justify-content: center;
     align-items: flex-start;
     margin-bottom: 5em;
     padding: 0 1em;
@@ -144,7 +144,7 @@ p {
     display: none;
   }
   
-  @media all and (max-width: 720px) {
+  /* @media all and (max-width: 720px) {
     #container {
       flex-direction: column;
       align-items: flex-start;
@@ -173,12 +173,15 @@ p {
       display: block;
     }
 
-    .flex-container-servicio{
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
+    
+  } */
+  
+  .flex-container-servicio{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
+  
   .product img {
     max-width: 100%;
     width: 20rem;
