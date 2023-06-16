@@ -8,16 +8,16 @@ import Filtro from "./market/filtro.astro";
     <button type="submit">Buscar</button>
     <button
       class="search-form-filter"
-      onclick="document.getElementById('id01').style.display = 'block'"
+      onclick="document.getElementById('id02').style.display = 'block'"
       style="width:auto;">filtro</button
     >
   </div>
 </div>
 
-<div id="id01" class="modal">
+<div id="id02" class="modal">
   <div class="modal-content animate">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
 
 
@@ -33,7 +33,7 @@ import Filtro from "./market/filtro.astro";
 
 <script>
   // Get the modal
-  var modal = document.getElementById("id01");
+  var modal = document.getElementById("id02");
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {

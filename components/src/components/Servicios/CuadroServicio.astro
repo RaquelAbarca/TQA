@@ -1,4 +1,5 @@
 ---
+import EstrellasCalificacion from "./EstrellasCalificacion.astro";
 const products = [
   {
     name: "jardineria fernando",
@@ -52,12 +53,18 @@ const products = [
             alt="Benefit 2"
             class="imagen-cuadro-servicio"
           />
-          <div>
-            <p>{item.name}</p>
-            <p>
-              {item.currency}
-              {item.price}
-            </p>
+          <div class="servicio-descripcion">
+            <div class="title">
+              <div class="text">{item.name}</div>
+              <div class="stars">
+              <EstrellasCalificacion  calificacion={"4.7"} />
+             </div>
+            </div>
+            
+            <div  class="price">
+              {item.currency}{item.price} <span>{item.description}</span>
+            </div>
+            
           </div>
         </a>
       </div>
@@ -77,15 +84,35 @@ const products = [
   .flex-container-servicio > div {
     width: 200px;
     margin: 10px;
-    text-align: center;
     line-height: 30px;
-    font-size: 30px;
+    
     border-radius: 12px;
   }
 
   .imagen-cuadro-servicio {
     max-width: 100%;
     border-radius: 12px;
+  }
+
+  
+  .servicio-descripcion {
+    font-size: 1.4em;
+    font-family: inter;
+  }
+  .servicio-descripcion .title{
+    display: flex;
+    justify-content: space-between
+  }
+
+  .servicio-descripcion .title .text{
+    font-weight: 600;
+  }
+
+  .servicio-descripcion .price{
+    font-size: 20px ;
+  }
+  .servicio-descripcion .price span{
+    color: rgb(116, 116, 116);
   }
 
   @media all and (max-width: 720px) {
