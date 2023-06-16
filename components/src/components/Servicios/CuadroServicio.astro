@@ -96,7 +96,7 @@ const products = [
 
   
   .servicio-descripcion {
-    font-size: 1.4em;
+    font-size: 18px;
     font-family: inter;
   }
   .servicio-descripcion .title{
@@ -117,10 +117,21 @@ const products = [
 
   @media all and (max-width: 720px) {
     
-
     .flex-container-servicio > div {
      width:unset;
    
     }
+
+    .servicio-descripcion {
+    font-size: 18px;
+    }
+  }
+
+  @media all and (min-width: 720px) {
+    
+    .servicio-descripcion .price{
+    font-size: 14px ;
+    }
+    
   }
 </style>
