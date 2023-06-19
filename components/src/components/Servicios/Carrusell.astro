@@ -4,11 +4,15 @@
 //const {products} =Astro.props;
 
 const products = [
-    { name: 'Product 1' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"#" ,id:"1" },
-    { name: 'Product 2' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"#" ,id:"2" },
-    { name: 'Product 3' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"#" ,id:"3" },
-    { name: 'Product 4' , description:'Enjoy free shipping on all orders.',src:"https://cdn.vox-cdn.com/thumbor/Stn4BvUwDgFAlTJ8zSfLvsBggak=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/9199167/white.jpg", price:10, currency:"$", forward:"#" ,id:"2" },
-
+    { name: 'Jardineria' , description:'Cuida tus espacios verdes.',src:"https://cdn-icons-png.flaticon.com/512/1518/1518863.png", price:10, currency:"$", forward:"#" ,id:"1" },
+    { name: 'Construccion' , description:'Repara y construlle lo que necesites',src:"https://cdn-icons-png.flaticon.com/512/4327/4327376.png", price:10, currency:"$", forward:"#" ,id:"2" },
+    { name: 'Product 3' , description:'Alistate para tu ocuacion especial.',src:"https://cdn-icons-png.flaticon.com/512/2707/2707142.png", price:10, currency:"$", forward:"#" ,id:"3" },
+    {name: 'Jardineria' , description:'Cuida tus espacios verdes.',src:"https://cdn-icons-png.flaticon.com/512/1518/1518863.png", price:10, currency:"$", forward:"#" ,id:"1" },
+    { name: 'Construccion' , description:'Repara y construlle lo que necesites',src:"https://cdn-icons-png.flaticon.com/512/4327/4327376.png", price:10, currency:"$", forward:"#" ,id:"2" },
+    { name: 'Product 3' , description:'Alistate para tu ocuacion especial.',src:"https://cdn-icons-png.flaticon.com/512/2707/2707142.png", price:10, currency:"$", forward:"#" ,id:"3" },
+    { name: 'Jardineria' , description:'Cuida tus espacios verdes.',src:"https://cdn-icons-png.flaticon.com/512/1518/1518863.png", price:10, currency:"$", forward:"#" ,id:"1" },
+    { name: 'Construccion' , description:'Repara y construlle lo que necesites',src:"https://cdn-icons-png.flaticon.com/512/4327/4327376.png", price:10, currency:"$", forward:"#" ,id:"2" },
+    { name: 'Product 3' , description:'Alistate para tu ocuacion especial.',src:"https://cdn-icons-png.flaticon.com/512/2707/2707142.png", price:10, currency:"$", forward:"#" ,id:"3" },
     // Add more products as needed
   ];
 
@@ -26,22 +30,19 @@ const products = [
 <section>
 
   <div class="product-carousel" item-display-d=3 item-display-t=2 item-display-m=1>
-    <button class="pre-btn" ><img src="left-arrow.png" alt=""></button>
-    <button class="nxt-btn" ><img src="left-arrow.png" alt=""></button>
+    <button class="pre-btn" ><img src="https://cdn-icons-png.flaticon.com/512/45/45093.png" alt=""></button>
+    <button class="nxt-btn" ><img src="https://cdn-icons-png.flaticon.com/512/45/45093.png" alt=""></button>
     <div class="product-container">
       {products.map((item) =>
         
-        <div class="product">
+        <div class="carrusell-product">
           <div class="product-image">              
               <img src={item.src} class="product-thumb" alt="Benefit 1">        
           </div>
           <div class="product-info">
               <h2 class="product-brand">{item.name}</h2>
-              <p class="product-short-description">{item.description}</p>
-              <span class="price">{item.currency}{item.price}</span>
           </div>
         </div>
-  
         )}
     </div>
   </div>
@@ -71,7 +72,7 @@ productContainers.forEach((item, i) => {
 <style>
   .product-carousel {
     position: relative;
-    height:16rem;
+    margin-bottom: 4rem;
   }
 
   .product-container {
@@ -81,10 +82,10 @@ productContainers.forEach((item, i) => {
   scroll-behavior: smooth;
   }
 
-  .product {
+  .carrusell-product {
     display: flex;
     flex: 0 0 auto;
-    margin-right: 40px;
+    margin-right: 50px;
     flex-direction: column;
     align-items: center;
     width: 8rem;
@@ -98,21 +99,20 @@ productContainers.forEach((item, i) => {
   position: relative;
   width: 100%;
   overflow: hidden;
-  width: 7rem;
-  height: 7rem;
-    }
+  width: 5rem;
+  height: 5rem;
+  }
 
-    .product-info{
-        text-align: center;
-    }
+  .product-info{
+    text-align: center;
+  }
 
   .product-thumb {
     max-width: 100%;
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-}
-  
+    width: 10rem;
+    object-fit: cover;
+  }
+
 .pre-btn,
 .nxt-btn {
   border: none;
@@ -129,12 +129,23 @@ productContainers.forEach((item, i) => {
 }
 .pre-btn {
   left: 0;
+  transform: rotate(180deg);
+}
+
+.pre-btn img{
+  left: 0;
+  width: 30px;
+  height: 30px;
 }
 
 .nxt-btn {
   right: 0;
-  transform: rotate(180deg);
-
 }
+
+.nxt-btn img{
+  width: 30px;
+  height: 30px;
+}
+
 </style>
 
